@@ -1,0 +1,388 @@
+/* 1. Kode Program */
+
+public class Asgdll { 
+// program utama (class)
+
+	public static void main(String[] args)
+	{
+	
+	/* 
+		Deklarasi variabel f dan f11, 
+		dimana f (float) = 20.0f
+		menggunakan f dibelakang karena bertipe data float
+	*/
+	
+	float f= 20.0f;
+	double f11;
+	/* Kamus */
+	
+	f11=10.0f;
+	// variabel f11
+	
+	System.out.println ("f : "+f + "\nf11: "+f11);
+	//menampilkan isi dari f dan f11;
+	}
+}
+
+public class Asign
+{
+//program utama
+	
+	public static void main(String[] args)
+	{
+		//deklarasi variabel i dan membaca integer i adalah 5
+		int i = 5;
+		
+		//menampilkan output yaitu kata hello
+		System.out.println("hello");
+		
+		// menampilkan isi dari variabel i
+		System.out.println("Ini nilai i : " +i);
+	}
+}
+
+public class ASIGNi
+{
+// Program Utama // Class (ASIGNi)
+
+	public static void main(String[] args)
+	{
+		// deklarasi variabel
+		short ks = 1;
+		int ki = 1;
+		long kl = 10000;
+		char c = 65; // inisialisasi karakter dengan integer
+		char c1 = 'Z'; // inisialisasi karakter dengan karakter
+		double x = 50.2;
+		float y = 50.2f;
+		
+		
+		// penulisan karakter sebagai karakter
+		System.out.println ("Karakter = "+ c);
+		System.out.println ("Karakter = "+ c1);
+		
+		//Pembatas
+		System.out.println ("----------------------------");
+		
+		// penulisan karakter sebagai integer 
+		System.out.println ("Karakter = "+ c);
+		System.out.println ("Karakter = "+ c1);
+		System.out.println ("Bilangan integer (short) = "+ ks);
+		System.out.println (" \t(int) = "+ ki);
+		System.out.println (" \t(long)= "+ kl);
+		System.out.println ("Bilangan Real x = "+ x);
+		System.out.println ("Bilangan Real y = "+ y);
+	}
+
+
+}
+import java.util.Scanner;
+/* contoh membaca integer menggunakan Class Scanner*/
+
+public class BacaData {
+// Program utama dgn class(BacaData)
+
+	public static void main(String[] args) 
+	{
+	// deklarasi variabel
+	int a;
+	
+	Scanner masukan; // import dari java.util.Scanner
+	
+	/* Program */
+	System.out.print ("Contoh membaca dan menulis, ketik nilai integer: \n");
+	// menampilkan out yaitu Contoh membaca dan menulis, ketik nilai integer: (enter)
+	
+	masukan = new Scanner(System.in);
+	// memasukkan variabel Scanner new masukan
+	
+	// karakter a sbgai(int) = masukan.dari selanjutkanyint()
+	a = masukan.nextInt(); 
+	/* coba ketik : masukan.nextInt(); ; Apa akibatnya ? */
+
+	//a : masukan.nextInt(); jika saya menggunakan tanda titik : (bukan =) maka terjadi error,
+	// karena maksud inputan dari nilai yg dibaca dgn tujuan a ini tdk diketahui), contoh output errornya ada di ss ini //
+	
+	System.out.print ("Nilai yang dibaca : "+ a);
+	// menampilkan output Nilai yang dibaca : + a(nilai yang anda input)
+	}
+}
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+//import javax.swing.*; //
+// contoh menggunakan import java.io. //
+
+public class Bacakar {
+
+	public static void main(String[] args) throws IOException
+	{
+	
+	// mendeklrasikan variabel dgn karakter
+	char cc;
+	int bil;
+	
+	// Pengimporan(pemanggilan) karakter dari java.io
+	InputStreamReader isr = new InputStreamReader(System.in);
+	BufferedReader dataIn = new BufferedReader(isr);
+	// atau
+	BufferedReader datAIn = new BufferedReader(new InputStreamReader(System.in));
+	
+	/* Algoritma */
+	// Algoritma pengimputan tiap kata
+	System.out.print ("hello\n");
+	System.out.print("baca 1 karakter : ");
+	
+	//perintah baca karakter cc
+	cc =dataIn.readLine().charAt(0);
+	// menampilkan baca 1 bilangan
+	System.out.print("baca 1 bilangan : ");
+	
+	//perintah baca bil
+	bil =Integer.parseInt(datAIn.readLine());
+	
+	/*String kar = JOptionPane.showInputDialog("Karakter 1 : ");
+	System.out.println(kar);*/
+	//JOptionPane.showMessageDialog(null, "hello");
+	System.out.print (cc +"\n" +bil+"\n");
+	System.out.print ("bye \n");
+	// Output dari karakter cc + bil+
+	// kemudian menampilkan kata terakhir bye
+	// note(\n(enter))
+	}
+}
+/*Casting menggunakan tipe data primitif*/
+public class Casting1 {
+
+	public static void main(String[] args) 
+	{
+	// mendeklarasikan variabel
+	int a=5,b=6;
+	float d=2.f,e=3.2f;
+	char g='5';
+	double k=3.14;
+	
+	System.out.println((float)a); // int <-- float
+	System.out.println((double)b); // int <-- double
+	System.out.println((int)d); // float <-- int
+	System.out.println((double)e); // float <-- double
+	System.out.println((int)g); // char <-- int (ASCII)
+	System.out.println((float)g); // char <-- float (ASCII)
+	System.out.println((double)g); // char <-- double (ASCII)
+	System.out.println((int)k); // double <-- int
+	System.out.println((float)k); // double <-- float
+	}
+}
+public class Casting2 { 
+ // Program utama classnya(Casting2)
+ 
+	public static void main(String[] args) {  
+		//mendeklarasikan variabel
+		int a=8, b=9;   
+		float d=2.f, e=3.2f;   
+		char g='5';   
+		double k=3.14;   
+		String n="67", m="45", l="100";      
+		a = Integer.parseInt(n);    
+		k = Double.parseDouble(m);  
+		d = Float.parseFloat(l);    
+
+		// Algoritma //
+		System.out.println("a : "+a+"\nk : "+k+"\nd : "+d);      
+		n = String.valueOf(b);  m = String.valueOf(g);   
+		l = String.valueOf(e);   
+		System.out.println("n : "+n+"\nm : "+m+"\nl : "+l);      
+		k = Double.valueOf(a).intValue(); 
+		double c = Integer.valueOf(b).doubleValue();      
+		System.out.println("k : "+k+"\nc : "+c+"\nl : "+l);      
+	} 
+ 
+} 
+
+public class Ekspresi { 
+
+	public static void main(String[] args) { 
+		int x = 1;     
+		int y = 2;       
+
+		System.out.print("x = "+ x + "\n");    
+		System.out.print("y = "+ y + "\n");   
+		System.out.print("hasil ekspresi  = (x<y)?x:y = "+ ((x < y) ? x : y)); 
+ } 
+ 
+} 
+ 
+ public class Ekspresi1 { 
+ 
+	public static void main(String[] args) {   
+		int x = 1; 
+		int y = 2; 
+		float fx; 
+		float fy; 
+ 
+ 
+		System.out.print ("x/y (format integer) = "+ x/y);    
+		System.out.print ("\nx/y (format float) = "+ x/y);  
+		fx=x;   
+		fy=y; 
+ 
+ 		System.out.print ("\nx/y (format integer) = "+ fx/fy);    
+		System.out.print ("\nx/y (format float)   = "+ fx/fy);   
+ 
+ 		System.out.print ("\nfloat(x)/float(y) (format integer) = "+ (float)x/(float)y);    
+		System.out.print ("\nfloat(x)/float(y) (format float)   = "+ (float)x/(float)y); 
+ 		x = 10; 
+		y = 3; 
+ 
+		System.out.print ("\nx/y (format integer) = "+ x/y);    
+		System.out.print ("\nx/y (format float)   = "+ x/y);   
+	} 
+ 
+} 
+
+public class Hello { 
+ 
+	public static void main(String[] args) {     
+	System.out.print("Hello");    
+	System.out.print("\nHello ");      
+	System.out.println("World");      
+	System.out.println("Welcome");  
+	} 
+ 
+} 
+public class Incr { 
+ 
+	public static void main(String[] args) {    
+		int i, j; 
+		i = 3;   j = i++; 
+ 
+  		System.out.println ("Nilai i : " + (++i) +        "\nNilai j : " + j);   
+	} 
+ 
+} 
+public class Oper1 { 
+
+	public static void main(String[] args) {   
+ 
+		int n = 10; /* 1010 */ 
+ 
+		int x = 1; 
+ 
+		int y = 2;  
+
+ 
+  		System.out.println ("n = "+ n); 
+ 
+  		System.out.println ("x = "+ x); 
+ 
+  		System.out.println ("y = "+ y); 
+ 
+  		System.out.println ("n & 8 = "+ (n & 8)); 
+ 
+  		System.out.println ("x & ~ 8 = "+ (x & ~8)); 
+ 
+  		System.out.println ("y << 2 = "+ (y << 2));  
+ 
+  		System.out.println ("y >> 3 = "+ (y >>3)); 
+ 
+	} 
+ 
+}
+
+public class Oper2 { 
+ 
+	public static void main(String[] args) {    
+		char i, j; 
+		i = 3;     
+		j = 4;            
+	
+		System.out.println("i = "+ (int) i);    
+		System.out.println("j = "+ j);   
+		System.out.println("i & j = "+ (i & j));   
+		System.out.println("i | j = "+ (i | j));   
+		System.out.println("i ^ j = "+ (i ^ j)); 
+		System.out.println(Math.pow(i, j));      
+		System.out.println("  ~i  = "+ ~i); 
+	}   
+ 
+} 
+public class Oper3 { 
+ 
+	public static void main(String[] args) {      
+		if (true && true){ System.out.println(true && true); } 
+		if (true & true) { System.out.println(true & false); }   
+		if (true)   { System.out.println(true); } 
+		if (true || true){ System.out.println(true); } 
+		if (true|false)  { System.out.println(true|false); } 
+ 
+	} 
+ 
+} 
+ 
+
+public class Oper4 { 
+ 
+	public static void main(String[] args) {   // TODO Auto-generated method stub   /* KAMUS */ 
+ 
+  		int i = 0; 
+		int j = 0; 
+ 
+  		char c = 8; char d = 10;   
+		int e = (((int)c > (int)d) ? c: d);    
+		int k = ((i>j) ? i: j);  
+ 
+  		System.out.print  ("Nilai e = "+ e);    
+		System.out.print  ("\nNilai k = "+ k);   
+		i = 2;   
+		j = 3; 
+ 
+  		k = ((i++>j++) ? i: j) ; 
+ 
+ 		System.out.print  ("\nNilai k = "+ k);   
+	} 
+
+} 
+
+public class Oprator{ 
+ 
+	public static void main(String[] args) {   
+ 
+   		boolean Bool1, Bool2, TF; 
+		int i,j, hsl ;    
+		float x,y,res;   
+		
+		System.out.println("Silahkan baca teksnya dan tambahkan perintah untuk menampilkan output"); 
+ 
+    		Bool1 = true; Bool2 = false;     
+		TF = Bool1 && Bool2 ;     
+		TF = Bool1 || Bool2 ;      
+		TF = ! Bool1 ;      
+		TF = Bool1  ^Bool2;        
+		i = 5; j = 2 ;       
+		hsl = i+j; hsl = i - j; 
+		hsl = i / j; 
+		hsl = i * j;     
+		hsl = i /j ; 
+		hsl = i%j ; 
+		x = 5 ; 
+		y = 5 ;       
+		res = x + y; 
+		res = x - y; 
+		res = x / y; 
+		res = x * y;    
+		TF = (i==j); 
+		TF = (i!=j);     
+		TF = (i < j); 
+		TF = (i > j); 
+		TF = (i <= j); 
+		TF = (i >= j);    
+		TF = (x != y);       
+		TF = (x < y); 
+		TF = (x > y); 
+		TF = (x <= y); 
+		TF = (x >= y); 
+	}
+ 
+} 
+  
